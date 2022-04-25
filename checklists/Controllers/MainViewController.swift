@@ -10,7 +10,7 @@ import UIKit
 class MainViewController: UITableViewController {
 
     let groups: [CheckListGroup] = [
-        CheckListGroup(title: "Birthdays", imageName: "birthdaypic"),
+        CheckListGroup(title: "Birthdays", imageName: "Birthdays"),
         CheckListGroup(title: "Croceries", imageName: "groceeriespic"),
         CheckListGroup(title: "To Do", imageName: "todopic"),
         CheckListGroup(title: "Business Stuff", imageName: "pic")
@@ -24,12 +24,14 @@ class MainViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return groups.count
+    
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let group: CheckListGroup = groups[indexPath.row]
-        let cell = UITableViewCell()
-        cell.textLabel?.text = group.title
+        let group = groups[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GroupCell", for: indexPath) as! GroupTableViewCell
+        cell.titleLabel.text = group.title
+        cell.iconView.image = UIImage(named: group.imageName)
         return cell
     }
 }

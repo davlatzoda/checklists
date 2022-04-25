@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		5B16025E280D9286007B9170 /* ChecklistGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B16025D280D9286007B9170 /* ChecklistGroup.swift */; };
+		5B19089A28103AA200FCCC1D /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B19089928103AA200FCCC1D /* GroupTableViewCell.swift */; };
+		5B19089B28103C7300FCCC1D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36F50D28099DF800253591 /* MainViewController.swift */; };
+		5B2AF9612812CC48007BFD8B /* GroupDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2AF9602812CC48007BFD8B /* GroupDetailsTableViewController.swift */; };
+		5B2AF9632812CE09007BFD8B /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2AF9622812CE09007BFD8B /* ChecklistItem.swift */; };
+		5B2AF9652812DF5D007BFD8B /* ItemsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B2AF9642812DF5D007BFD8B /* ItemsTableViewCell.swift */; };
 		5B36F50A28099DF800253591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36F50928099DF800253591 /* AppDelegate.swift */; };
 		5B36F50C28099DF800253591 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36F50B28099DF800253591 /* SceneDelegate.swift */; };
-		5B36F50E28099DF800253591 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B36F50D28099DF800253591 /* MainViewController.swift */; };
 		5B36F51128099DF800253591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B36F50F28099DF800253591 /* Main.storyboard */; };
 		5B36F51328099DF900253591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B36F51228099DF900253591 /* Assets.xcassets */; };
 		5B36F51628099DF900253591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B36F51428099DF900253591 /* LaunchScreen.storyboard */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		5B16025D280D9286007B9170 /* ChecklistGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistGroup.swift; sourceTree = "<group>"; };
+		5B19089928103AA200FCCC1D /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
+		5B2AF9602812CC48007BFD8B /* GroupDetailsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDetailsTableViewController.swift; sourceTree = "<group>"; };
+		5B2AF9622812CE09007BFD8B /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
+		5B2AF9642812DF5D007BFD8B /* ItemsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTableViewCell.swift; sourceTree = "<group>"; };
 		5B36F50628099DF800253591 /* checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B36F50928099DF800253591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B36F50B28099DF800253591 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,8 +51,27 @@
 			isa = PBXGroup;
 			children = (
 				5B16025D280D9286007B9170 /* ChecklistGroup.swift */,
+				5B2AF9622812CE09007BFD8B /* ChecklistItem.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5B190898281039E100FCCC1D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5B19089928103AA200FCCC1D /* GroupTableViewCell.swift */,
+				5B2AF9642812DF5D007BFD8B /* ItemsTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5B2AF95F2812C8D8007BFD8B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5B36F50D28099DF800253591 /* MainViewController.swift */,
+				5B2AF9602812CC48007BFD8B /* GroupDetailsTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		5B36F4FD28099DF800253591 = {
@@ -66,10 +93,11 @@
 		5B36F50828099DF800253591 /* checklists */ = {
 			isa = PBXGroup;
 			children = (
+				5B2AF95F2812C8D8007BFD8B /* Controllers */,
+				5B190898281039E100FCCC1D /* Cells */,
 				5B16025C280D922D007B9170 /* Models */,
 				5B36F50928099DF800253591 /* AppDelegate.swift */,
 				5B36F50B28099DF800253591 /* SceneDelegate.swift */,
-				5B36F50D28099DF800253591 /* MainViewController.swift */,
 				5B36F50F28099DF800253591 /* Main.storyboard */,
 				5B36F51228099DF900253591 /* Assets.xcassets */,
 				5B36F51428099DF900253591 /* LaunchScreen.storyboard */,
@@ -149,10 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B36F50E28099DF800253591 /* MainViewController.swift in Sources */,
+				5B2AF9652812DF5D007BFD8B /* ItemsTableViewCell.swift in Sources */,
 				5B36F50A28099DF800253591 /* AppDelegate.swift in Sources */,
 				5B16025E280D9286007B9170 /* ChecklistGroup.swift in Sources */,
+				5B2AF9632812CE09007BFD8B /* ChecklistItem.swift in Sources */,
+				5B2AF9612812CC48007BFD8B /* GroupDetailsTableViewController.swift in Sources */,
 				5B36F50C28099DF800253591 /* SceneDelegate.swift in Sources */,
+				5B19089A28103AA200FCCC1D /* GroupTableViewCell.swift in Sources */,
+				5B19089B28103C7300FCCC1D /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +331,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G25A9668QP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = checklists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -327,6 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G25A9668QP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = checklists/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
